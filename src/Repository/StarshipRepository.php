@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Model\Starship;
+use App\Model\StarshipStatusEnum;
 use Psr\Log\LoggerInterface;
 
 class StarshipRepository
@@ -21,21 +22,21 @@ class StarshipRepository
                 'Millennium Falcon',
                 'Light Freighter',
                 'Han Solo',
-                'Operational',
+                StarshipStatusEnum::IN_PROGRESS 
             ),
             new Starship(
                 2,
                 'Executor',
                 'Super Star Destroyer',
                 'Darth Vader',
-                'Destroyed',
+                StarshipStatusEnum::COMPLETED  
             ),
             new Starship(
                 3,
                 'Ghost',
                 'Modified VCX-100',
                 'Hera Syndulla',
-                'Operational',
+                StarshipStatusEnum::WAITING  
             ),
         ];
     }
